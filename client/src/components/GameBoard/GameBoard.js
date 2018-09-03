@@ -41,9 +41,7 @@ class GameBoard extends Component {
 
   componentWillMount() {
     let player = window.localStorage.getItem("player");
-    this.setState({ code: generateCode(), player, timeStart: Date.now() }, () =>
-      console.log(this.state.code)
-    );
+    this.setState({ code: generateCode(), player, timeStart: Date.now() });
   }
 
   clearBoard() {
