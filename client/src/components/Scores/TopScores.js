@@ -25,6 +25,9 @@ class TopScores extends Component {
     return (
       <div style={style ? this.props.style : null}>
         <h1>Top Scores</h1>
+        <a href="/scores" className="btn btn-link">
+          View all scores
+        </a>
         <table className="table">
           <thead className="thead-dark">
             <tr>
