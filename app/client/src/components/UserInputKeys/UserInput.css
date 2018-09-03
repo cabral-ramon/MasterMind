@@ -1,0 +1,22 @@
+.inputContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+
+.inputItem {
+  box-sizing: border-box;
+  width: 150px;
+  height: 150px;
+  background-color: gainsboro;
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid gainsboro;
+  border-radius: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+}

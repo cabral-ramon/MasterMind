@@ -1,0 +1,1 @@
+export const RECEIVE_SCORES = "RECEIVE_SCORES";
