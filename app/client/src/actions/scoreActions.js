@@ -9,11 +9,17 @@ const receiveScores = scores => {
 };
 
 export const addScore = scoreParams => dispatch => {
-  scoreApi
+  return scoreApi
     .addScore(scoreParams)
     .then(scores => dispatch(receiveScores(scores)));
 };
 
 export const fetchScores = () => dispatch => {
   return scoreApi.fetchScores().then(scores => dispatch(receiveScores(scores)));
+};
+
+export const searchScores = query => dispatch => {
+  return scoreApi
+    .searchScores(query)
+    .then(scores => dispatch(receiveScores(scores)));
 };

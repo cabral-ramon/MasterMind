@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchScores } from "../../actions/scoreActions";
+import PropTypes from "prop-types";
 
 class TopScores extends Component {
   constructor(props) {
@@ -17,24 +18,32 @@ class TopScores extends Component {
   componentWillReceiveProps({ scores }) {
     this.setState({ scores });
   }
+
   render() {
-    debugger;
     const { scores } = this.state;
+    const { style } = this.props;
     return (
-      <table>
-        <tr>
-          <th>Username</th>
-          <th>Score</th>
-        </tr>
-        <tbody>
-          {scores.map(score => (
+      <div style={style ? this.props.style : null}>
+        <h1>Top Scores</h1>
+        <table className="table">
+          <thead className="thead-dark">
             <tr>
-              <td>{score.username}</td>
-              <td>{score.score}</td>
+              <th scope="col">Rank</th>
+              <th scope="col">Username</th>
+              <th scope="col">Score</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {scores.slice(0, 10).map((score, index) => (
+              <tr key={score.id}>
+                <th scope="row">{index + 1}</th>
+                <td>{score.player}</td>
+                <td>{score.score}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     );
   }
 }
@@ -46,6 +55,10 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   fetchScores: () => dispatch(fetchScores())
 });
+
+TopScores.propTypes = {
+  fetchScores: PropTypes.func.isRequired
+};
 
 export default connect(
   mapStateToProps,

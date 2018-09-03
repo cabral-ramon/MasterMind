@@ -1,14 +1,29 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./Feedback.css";
 
 const Feedback = ({ feedback }) => (
   <div className="playBoxContainer">
     {feedback.map((match, index) => {
-      return match ? (
-        <div key={index}>Correct</div>
-      ) : (
-        <div key={index}>False</div>
-      );
+      if (match === 3) {
+        return (
+          <div className="feedback-item" key={index}>
+            <i className="fas fa-check" style={{ color: "green" }} />
+          </div>
+        );
+      } else if (match === 2) {
+        return (
+          <div className="feedback-item" key={index}>
+            <i className="far fa-circle" style={{ color: "blue" }} />
+          </div>
+        );
+      } else {
+        return (
+          <div className="feedback-item" key={index}>
+            <i className="fas fa-times" style={{ color: "red" }} />
+          </div>
+        );
+      }
     })}
   </div>
 );

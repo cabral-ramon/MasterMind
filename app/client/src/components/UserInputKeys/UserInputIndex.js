@@ -11,7 +11,7 @@ class UserInputIndex extends Component {
       inputKeys.push(i);
     }
     return (
-      <div className="inputContainer">
+      <div className="inputContainer mt-3">
         {inputKeys.map(key => {
           if (userInput.includes(key)) {
             return <UserInputKey disabled={true} key={key} num={key} />;

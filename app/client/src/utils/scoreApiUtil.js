@@ -1,12 +1,25 @@
 import axios from "axios";
 
 export const addScore = score => {
-  fetch("http://localhost:3001/api/v1/scoreboards", {
-    method: "POST",
-    body: score
-  }).then(res => res.json);
+  return axios
+    .post("/api/v1/scoreboards", {
+      score
+    })
+    .then(res => res.data);
 };
 
 export const fetchScores = () => {
-  return axios.get("/api/v1/scoreboards").then(res => res.data);
+  return axios
+    .get("/api/v1/scoreboards", { headers: { responseType: "json" } })
+    .then(res => res.data);
+};
+
+export const searchScores = query => {
+  return axios
+    .get(`/api/v1/search?query=${query}`, {
+      headers: { responseType: "json" }
+    })
+    .then(res => {
+      return res.data;
+    });
 };

@@ -1,0 +1,11 @@
+.feedback-item {
+  width: 160px;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+}
+
+.fas,
+.far {
+  font-size: 40px;
+}

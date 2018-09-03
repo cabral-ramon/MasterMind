@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
+  max-width: 800px;
 }
 
 .inputItem {
@@ -19,4 +20,10 @@
   justify-content: center;
   align-items: center;
   font-size: 36px;
+}
+
+.inputItem:hover {
+  cursor: pointer;
+  border-color: darkgrey;
+  box-shadow: 1px 1px darkgrey;
 }
