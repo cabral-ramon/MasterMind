@@ -12,6 +12,9 @@ const UserInputKey = ({ num, handleDrag, index, disabled }) => {
     return (
       <div
         draggable
+        onDragStart={e => {
+          e.dataTransfer.setData("text/plain", "anything"); //firefox fix
+        }}
         onDrag={e => handleDrag(e, num, index)}
         className="inputItem"
       >

@@ -14,3 +14,8 @@
   border: 1px solid gainsboro;
   border-radius: 5%;
 }
+.playBox-wrapper {
+  width: 700px;
+  width: -moz-fit-content;
+  width: fit-content;
+}

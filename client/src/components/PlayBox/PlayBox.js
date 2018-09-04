@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import "./PlayBox.css";
 
 const PlayBox = ({ userInput, handleDragOver, handleDrag, handleDrop }) => (
-  <div className="row mx-auto" style={{ width: "fit-content" }}>
+  <div className="row mx-auto playBox-wrapper">
     {userInput.map((box, idx) => (
       <div
         key={idx}

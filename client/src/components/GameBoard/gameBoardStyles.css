@@ -1,0 +1,5 @@
+.button-wrapper {
+  width: 135px;
+  width: -moz-fit-content;
+  width: fit-content;
+}

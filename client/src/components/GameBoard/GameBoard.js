@@ -134,7 +134,7 @@ class GameBoard extends Component {
           <h4>{turns} turns left: </h4>
         </div>
         <div>
-          <div className="mx-auto mb-5" style={{ width: "fit-content" }}>
+          <div className="mx-auto mb-5 button-wrapper">
             <Button
               className="btn btn-danger mr-2"
               action={this.clearBoard.bind(this)}
