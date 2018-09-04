@@ -84,6 +84,7 @@ class GameBoard extends Component {
   }
 
   handleDrag(e, num, index) {
+    e.preventDefault();
     // if the tile is dragged from play box it will have an index
     this.setState({
       inputTarget: num,
@@ -92,6 +93,7 @@ class GameBoard extends Component {
   }
 
   handleDrop(e) {
+    e.preventDefault();
     const { dropTarget, inputTarget, userInput, fromIndex } = this.state;
     const newUserInput = userInput.splice(0, 4);
 
@@ -110,7 +112,6 @@ class GameBoard extends Component {
       dropTarget: null,
       fromIndex: null
     });
-    e.preventDefault();
   }
 
   render() {
