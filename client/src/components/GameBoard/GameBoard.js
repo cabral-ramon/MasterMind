@@ -84,7 +84,10 @@ class GameBoard extends Component {
   }
 
   handleDrag(e, num, index) {
-    e.preventDefault();
+    if(e.cancelable) { // cannot prevent default for mobile touch event
+      e.preventDefault();
+    }
+
     // if the tile is dragged from play box it will have an index
     this.setState({
       inputTarget: num,
@@ -92,9 +95,20 @@ class GameBoard extends Component {
     });
   }
 
-  handleDrop(e) {
-    e.preventDefault();
-    const { dropTarget, inputTarget, userInput, fromIndex } = this.state;
+  handleDrop(e, idx) { //idx only comes in on mobile touch even
+    let mobile;
+    if(e.cancelable) { // cannot prevent default for mobile touch event
+      e.preventDefault();
+      mobile = false;
+    } else {
+      mobile = true;
+    }
+    let dropTarget = this.state.dropTarget;
+    if(mobile && dropTarget === null) {
+      dropTarget = idx;
+    }
+    const { inputTarget, userInput, fromIndex } = this.state;
+
     const newUserInput = userInput.splice(0, 4);
 
     //check if we need to perform a swap

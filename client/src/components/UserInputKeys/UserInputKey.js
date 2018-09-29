@@ -17,6 +17,7 @@ const UserInputKey = ({ num, handleDrag, index, disabled }) => {
         }}
         onDrag={e => handleDrag(e, num, index)}
         className="inputItem"
+        onTouchStart={e => handleDrag(e, num, index)}
       >
         {num}
       </div>

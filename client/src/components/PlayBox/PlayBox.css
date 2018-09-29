@@ -19,3 +19,10 @@
   width: -moz-fit-content;
   width: fit-content;
 }
+
+@media (max-width: 400px) {
+  .playBox {
+    width: 60px;
+    height: 60px;
+  }
+}

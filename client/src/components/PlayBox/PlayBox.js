@@ -12,6 +12,7 @@ const PlayBox = ({ userInput, handleDragOver, handleDrag, handleDrop }) => (
         onDragOver={e => handleDragOver(e, idx)}
         className="playBox"
         onDrop={handleDrop}
+        onTouchStart={e => handleDrop(e, idx)}
       >
         {box === null ? (
           ""

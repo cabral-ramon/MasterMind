@@ -27,3 +27,10 @@
   border-color: darkgrey;
   box-shadow: 1px 1px darkgrey;
 }
+
+@media (max-width: 400px) {
+  .inputItem {
+    width: 50px;
+    height: 50px;
+  }
+}
