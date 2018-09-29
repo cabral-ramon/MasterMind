@@ -3,13 +3,13 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
-  max-width: 800px;
+  max-width: 479px;
 }
 
 .inputItem {
   box-sizing: border-box;
-  width: 150px;
-  height: 150px;
+  width: 70px;
+  height: 70px;
   background-color: gainsboro;
   text-align: center;
   padding: 5px;

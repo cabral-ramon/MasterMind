@@ -6,8 +6,8 @@
 
 .playBox {
   box-sizing: border-box;
-  width: 160px;
-  height: 160px;
+  width: 80px;
+  height: 80px;
   margin: 0 5px;
   background-color: dimgrey;
   margin: 5px;

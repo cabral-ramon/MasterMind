@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-dark bg-dark mb-5">
+        <nav className="navbar navbar-dark bg-dark mb-3">
           <a className="navbar-brand" href="/">
             MasterMind
           </a>
