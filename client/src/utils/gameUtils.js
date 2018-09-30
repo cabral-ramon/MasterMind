@@ -23,7 +23,7 @@ export const checkMatches = (code, input) => {
     matches: [],
     hits: 0
   };
-  // 3 => number is corrent and at the right index
+  // 3 => number is correct and at the right index
   // 2 => number is in the code but not at the right index
   // 1 => number is not in the code
   for (let i = 0; i < code.length; i++) {
@@ -47,16 +47,17 @@ export const isWinningPlay = arrOfMatches => {
 };
 
 export const getScore = (time, turns) => {
+  let t = Math.floor(Date.now() - time) / 1000;
   let timeBonus;
-  if (time < 10000) {
-    timeBonus = 19923;
-  } else if (time < 15000) {
-    timeBonus = 14092;
-  } else if (time < 25000) {
-    timeBonus = 7777;
+  if (t < 15) {
+    timeBonus = 2000;
+  } else if (t < 30) {
+    timeBonus = 1400;
+  } else if (t < 60) {
+    timeBonus = 700;
   } else {
-    timeBonus = 4645;
+    timeBonus = 450;
   }
 
-  return turns * timeBonus;
+  return Math.floor(turns * timeBonus * t);
 };
