@@ -20,8 +20,6 @@ describe('scoring', () => {
     const fastTime = Date.now() - 10000 // completed 10s ago
     const highScore = getScore(fastTime, 10);
     const lowScore = getScore(fastTime, 5);
-    console.log(highScore);
-    console.log(lowScore);
     expect(highScore > lowScore).toBeTruthy();
   })
 });

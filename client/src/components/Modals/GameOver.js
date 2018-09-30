@@ -16,7 +16,6 @@ const GameOver = ({ won, player, score, code }) => {
         <p>
           Your score was: <span>{score}</span>
         </p>
-        <TopScores style={{ height: "500px", overflowY: "scroll" }} />
         <a href="/game" className="btn btn-link">
           New Game
         </a>
@@ -26,6 +25,7 @@ const GameOver = ({ won, player, score, code }) => {
         <a href="/scores" className="btn btn-link">
           All Scores
         </a>
+        <TopScores />
       </div>
     );
   } else {
