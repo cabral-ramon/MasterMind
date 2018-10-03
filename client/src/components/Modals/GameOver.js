@@ -22,9 +22,6 @@ const GameOver = ({ won, player, score, code }) => {
         <a href="/" className="btn btn-link">
           Home
         </a>
-        <a href="/scores" className="btn btn-link">
-          All Scores
-        </a>
         <TopScores />
       </div>
     );

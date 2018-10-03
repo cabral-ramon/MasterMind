@@ -7,7 +7,7 @@ class TopScores extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      scores: []
+      scores: [],
     };
   }
 
