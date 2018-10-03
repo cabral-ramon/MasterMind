@@ -8,11 +8,14 @@ class TopScores extends Component {
     super(props);
     this.state = {
       scores: [],
+      fetching: false
     };
   }
 
   componentDidMount() {
-    this.props.fetchScores();
+    this.setState({ fetching: true});
+    this.props.fetchScores()
+      .then( () => this.setState({ fetching: false }));
   }
 
   componentWillReceiveProps({ scores }) {
@@ -20,8 +23,11 @@ class TopScores extends Component {
   }
 
   render() {
-    const { scores } = this.state;
+    const { scores, fetching } = this.state;
     const { style } = this.props;
+    if (fetching) {
+      return <p>Loading...</p>
+    }
     return (
       <div style={style ? this.props.style : null}>
         <h1>Top Scores</h1>
