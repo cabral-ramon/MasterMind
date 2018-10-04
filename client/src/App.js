@@ -14,6 +14,16 @@ class App extends Component {
           </a>
         </nav>
         <Router />
+        <footer>
+          <a target="_blank" rel="noopener noreferrer" href="http://ramoncabral.com">
+            <small>By Ramon Cabral</small>
+          </a>
+          <ul>
+            <li>Github</li>
+            <li>LinkedIn</li>
+            <li>Portfolio</li>
+          </ul>
+        </footer>
       </div>
     );
   }
