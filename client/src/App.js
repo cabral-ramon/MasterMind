@@ -15,13 +15,11 @@ class App extends Component {
         </nav>
         <Router />
         <footer>
-          <a target="_blank" rel="noopener noreferrer" href="http://ramoncabral.com">
-            <small>By Ramon Cabral</small>
-          </a>
+          <small>By Ramon Cabral</small>
           <ul>
-            <li>Github</li>
-            <li>LinkedIn</li>
-            <li>Portfolio</li>
+            <li><a href="https://github.com/cabral-ramon">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/cabral-ramon/">LinkedIn</a></li>
+            <li><a href="http://ramoncabral.com/">Portfolio</a></li>
           </ul>
         </footer>
       </div>

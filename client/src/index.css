@@ -12,6 +12,10 @@ footer {
   padding: 10px 20px;
 }
 
+footer a {
+  color: white;
+}
+
 footer > ul {
   display: flex;
   list-style: none;
