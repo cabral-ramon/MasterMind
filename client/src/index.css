@@ -12,13 +12,18 @@ footer {
   padding: 10px 20px;
 }
 
-footer a {
+.profile-links {
   color: white;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.profile-links:hover {
+  text-decoration: none;
 }
 
 footer > ul {
   display: flex;
   list-style: none;
-  width: 50%;
   justify-content: space-between;
 }
